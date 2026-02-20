@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bubble Sort — Python & DSA Learning Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+</head>
+<body>
+  <div id="sidebar-overlay" class="sidebar-overlay"></div>
+  <button id="sidebar-toggle" class="sidebar-toggle" aria-label="Open menu">☰</button>
+  <div class="app-wrap">
+    <aside class="sidebar">
+      <div class="sidebar-brand"><a href="../index.html">Python & DSA Learning Hub</a></div>
+      <div class="sidebar-author">
+        <a href="https://github.com/JibbranAli" target="_blank" rel="noopener noreferrer" class="author-avatar-wrap" aria-label="Syed Jibbran Ali on GitHub">
+          <img src="https://github.com/JibbranAli.png" alt="Syed Jibbran Ali" class="author-avatar" width="64" height="64">
+        </a>
+        <p class="author-name">Syed Jibbran Ali</p>
+        <p class="author-role">DevOps · AI · Full-Stack</p>
+        <div class="author-links">
+          <a href="https://github.com/JibbranAli" target="_blank" rel="noopener noreferrer" class="author-link author-link-github" aria-label="GitHub">GitHub</a>
+          <a href="https://www.linkedin.com/in/jibbran-ali/" target="_blank" rel="noopener noreferrer" class="author-link author-link-linkedin" aria-label="LinkedIn">LinkedIn</a>
+        </div>
+      </div>
+      <div id="sidebar-progress" class="sidebar-progress"><div class="sidebar-progress-label">Your progress</div><div class="sidebar-progress-bar"><div class="sidebar-progress-fill" style="width: 0%;"></div></div><div class="sidebar-progress-text">0 / 18 completed</div></div>
+      <nav class="nav-group"><button type="button" class="nav-group-toggle" aria-expanded="true">Getting Started <span class="chevron">▼</span></button><div class="nav-group-links"><a class="nav-link" href="../index.html">Home</a><a class="nav-link" href="introduction.html">Introduction</a></div></nav>
+      <nav class="nav-group"><button type="button" class="nav-group-toggle" aria-expanded="true">Foundations <span class="chevron">▼</span></button><div class="nav-group-links"><a class="nav-link" href="arrays.html">Arrays</a></div></nav>
+      <nav class="nav-group"><button type="button" class="nav-group-toggle" aria-expanded="true">Python Data Structures <span class="chevron">▼</span></button><div class="nav-group-links"><a class="nav-link" href="lists.html">Lists</a><a class="nav-link" href="tuples.html">Tuples</a><a class="nav-link" href="sets.html">Sets</a><a class="nav-link" href="dictionaries.html">Dictionaries</a></div></nav>
+      <nav class="nav-group"><button type="button" class="nav-group-toggle" aria-expanded="true">File & Algorithms <span class="chevron">▼</span></button><div class="nav-group-links"><a class="nav-link" href="file-handling.html">File Handling</a><a class="nav-link" href="algorithms-basics.html">Algorithms Basics</a><a class="nav-link" href="time-space-complexity.html">Time & Space Complexity</a></div></nav>
+      <nav class="nav-group"><button type="button" class="nav-group-toggle" aria-expanded="true">Searching <span class="chevron">▼</span></button><div class="nav-group-links"><a class="nav-link" href="linear-search.html">Linear Search</a><a class="nav-link" href="binary-search.html">Binary Search</a></div></nav>
+      <nav class="nav-group"><button type="button" class="nav-group-toggle" aria-expanded="true">Sorting <span class="chevron">▼</span></button><div class="nav-group-links"><a class="nav-link" href="bubble-sort.html">Bubble Sort</a><a class="nav-link" href="selection-sort.html">Selection Sort</a><a class="nav-link" href="insertion-sort.html">Insertion Sort</a><a class="nav-link" href="quick-sort.html">Quick Sort</a><a class="nav-link" href="merge-sort.html">Merge Sort</a></div></nav>
+      <nav class="nav-group"><button type="button" class="nav-group-toggle" aria-expanded="true">Linked Lists <span class="chevron">▼</span></button><div class="nav-group-links"><a class="nav-link" href="linked-lists.html">Singly / Doubly / Circular</a></div></nav>
+      <nav class="nav-group"><button type="button" class="nav-group-toggle" aria-expanded="true">Graphs <span class="chevron">▼</span></button><div class="nav-group-links"><a class="nav-link" href="graph-dfs.html">Graph Algorithms (DFS)</a></div></nav>
+    </aside>
+    <main class="main">
+      <a href="../index.html" class="back-link">← Back to Home</a>
+      <header class="lesson-header"><nav class="breadcrumb"><a href="../index.html">Home</a><span>/</span><span>Bubble Sort</span></nav><h1 class="lesson-title">Bubble Sort</h1><p class="lesson-meta">Sorting — repeatedly swap adjacent pairs</p><div class="lesson-header-actions"><div class="lesson-progress-wrap"><div class="lesson-progress-bar"><div class="lesson-progress-fill" style="width: 0%;"></div></div><span class="lesson-progress-text">0% course complete</span></div><div class="mark-complete-wrap"><button type="button" id="mark-complete-btn" class="mark-complete" data-lesson-id="bubble-sort" aria-label="Mark as completed"><span class="check-icon">✓</span><span>Mark as completed</span></button></div></div></header>
+      <h2>Idea</h2>
+      <p>Repeatedly pass through the array. Compare adjacent elements and swap if they are in the wrong order. Larger elements “bubble” to the end. Stop when a pass makes no swaps.</p>
+
+      <h2>Python code</h2>
+      <pre><code class="language-python">def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        swapped = False
+        for j in range(0, n - 1 - i):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+                swapped = True
+        if not swapped:
+            break
+    return arr</code></pre>
+
+      <p>Time: O(n²). Space: O(1). Add full explanation and step-by-step from your PDF.</p>
+      <p><a href="selection-sort.html" class="btn btn-primary">Next: Selection Sort →</a></p>
+    </main>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+  <script src="../js/main.js"></script>
+  <script>Prism.highlightAll();</script>
+</body>
+</html>

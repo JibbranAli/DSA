@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrays using Python — Python & DSA Learning Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+</head>
+<body>
+  <div id="sidebar-overlay" class="sidebar-overlay"></div>
+  <button id="sidebar-toggle" class="sidebar-toggle" aria-label="Open menu">☰</button>
+  <div class="app-wrap">
+    <aside class="sidebar">
+      <div class="sidebar-brand"><a href="../index.html">Python & DSA Learning Hub</a></div>
+      <div class="sidebar-author">
+        <a href="https://github.com/JibbranAli" target="_blank" rel="noopener noreferrer" class="author-avatar-wrap" aria-label="Syed Jibbran Ali on GitHub">
+          <img src="https://github.com/JibbranAli.png" alt="Syed Jibbran Ali" class="author-avatar" width="64" height="64">
+        </a>
+        <p class="author-name">Syed Jibbran Ali</p>
+        <p class="author-role">DevOps · AI · Full-Stack</p>
+        <div class="author-links">
+          <a href="https://github.com/JibbranAli" target="_blank" rel="noopener noreferrer" class="author-link author-link-github" aria-label="GitHub">GitHub</a>
+          <a href="https://www.linkedin.com/in/jibbran-ali/" target="_blank" rel="noopener noreferrer" class="author-link author-link-linkedin" aria-label="LinkedIn">LinkedIn</a>
+        </div>
+      </div>
+      <div id="sidebar-progress" class="sidebar-progress">
+        <div class="sidebar-progress-label">Your progress</div>
+        <div class="sidebar-progress-bar">
+          <div class="sidebar-progress-fill" style="width: 0%;"></div>
+        </div>
+        <div class="sidebar-progress-text">0 / 18 completed</div>
+      </div>
+      <nav class="nav-group">
+        <button type="button" class="nav-group-toggle" aria-expanded="true">Getting Started <span class="chevron">▼</span></button>
+        <div class="nav-group-links">
+          <a class="nav-link" href="../index.html">Home</a>
+          <a class="nav-link" href="introduction.html">Introduction</a>
+        </div>
+      </nav>
+      <nav class="nav-group">
+        <button type="button" class="nav-group-toggle" aria-expanded="true">Foundations <span class="chevron">▼</span></button>
+        <div class="nav-group-links">
+          <a class="nav-link" href="arrays.html">Arrays</a>
+        </div>
+      </nav>
+      <nav class="nav-group">
+        <button type="button" class="nav-group-toggle" aria-expanded="true">Python Data Structures <span class="chevron">▼</span></button>
+        <div class="nav-group-links">
+          <a class="nav-link" href="lists.html">Lists</a>
+          <a class="nav-link" href="tuples.html">Tuples</a>
+          <a class="nav-link" href="sets.html">Sets</a>
+          <a class="nav-link" href="dictionaries.html">Dictionaries</a>
+        </div>
+      </nav>
+      <nav class="nav-group">
+        <button type="button" class="nav-group-toggle" aria-expanded="true">File & Algorithms <span class="chevron">▼</span></button>
+        <div class="nav-group-links">
+          <a class="nav-link" href="file-handling.html">File Handling</a>
+          <a class="nav-link" href="algorithms-basics.html">Algorithms Basics</a>
+          <a class="nav-link" href="time-space-complexity.html">Time & Space Complexity</a>
+        </div>
+      </nav>
+      <nav class="nav-group">
+        <button type="button" class="nav-group-toggle" aria-expanded="true">Searching <span class="chevron">▼</span></button>
+        <div class="nav-group-links">
+          <a class="nav-link" href="linear-search.html">Linear Search</a>
+          <a class="nav-link" href="binary-search.html">Binary Search</a>
+        </div>
+      </nav>
+      <nav class="nav-group">
+        <button type="button" class="nav-group-toggle" aria-expanded="true">Sorting <span class="chevron">▼</span></button>
+        <div class="nav-group-links">
+          <a class="nav-link" href="bubble-sort.html">Bubble Sort</a>
+          <a class="nav-link" href="selection-sort.html">Selection Sort</a>
+          <a class="nav-link" href="insertion-sort.html">Insertion Sort</a>
+          <a class="nav-link" href="quick-sort.html">Quick Sort</a>
+          <a class="nav-link" href="merge-sort.html">Merge Sort</a>
+        </div>
+      </nav>
+      <nav class="nav-group">
+        <button type="button" class="nav-group-toggle" aria-expanded="true">Linked Lists <span class="chevron">▼</span></button>
+        <div class="nav-group-links">
+          <a class="nav-link" href="linked-lists.html">Singly / Doubly / Circular</a>
+        </div>
+      </nav>
+      <nav class="nav-group">
+        <button type="button" class="nav-group-toggle" aria-expanded="true">Graphs <span class="chevron">▼</span></button>
+        <div class="nav-group-links">
+          <a class="nav-link" href="graph-dfs.html">Graph Algorithms (DFS)</a>
+        </div>
+      </nav>
+    </aside>
+    <main class="main">
+      <a href="../index.html" class="back-link">← Back to Home</a>
+
+      <header class="lesson-header">
+        <nav class="breadcrumb">
+          <a href="../index.html">Home</a>
+          <span>/</span>
+          <span>Arrays</span>
+        </nav>
+        <h1 class="lesson-title">Arrays using Python</h1>
+        <p class="lesson-meta">1D and 2D arrays, traversal, insertion, deletion, update</p>
+        <div class="lesson-header-actions">
+          <div class="lesson-progress-wrap">
+            <div class="lesson-progress-bar">
+              <div class="lesson-progress-fill" style="width: 0%;"></div>
+            </div>
+            <span class="lesson-progress-text">0% course complete</span>
+          </div>
+          <div class="mark-complete-wrap">
+            <button type="button" id="mark-complete-btn" class="mark-complete" data-lesson-id="arrays" aria-label="Mark lesson as completed">
+              <span class="check-icon">✓</span>
+              <span>Mark as completed</span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <section class="section-card scroll-reveal">
+        <h2>What is an array?</h2>
+        <p>An array is a collection of elements stored in contiguous memory. Each element is identified by an index. In Python, we often use lists to represent arrays, or the <code>array</code> module for typed arrays.</p>
+      </section>
+
+      <section class="section-card scroll-reveal">
+        <h2>One-dimensional (1D) arrays</h2>
+        <p>A 1D array is a linear sequence of elements. In Python we use a list:</p>
+        <div class="code-block-wrapper" data-filename="example_1d.py">
+          <div class="code-toolbar">
+            <span class="code-filename">example_1d.py</span>
+            <button type="button" class="copy-btn">Copy</button>
+          </div>
+          <pre><code class="language-python"># Create a 1D array (list)
+arr = [10, 20, 30, 40, 50]
+
+# Access by index (0-based)
+print(arr[0])   # 10
+print(arr[2])   # 30
+print(arr[-1])  # 50 (last element)</code></pre>
+        </div>
+
+        <div class="step-block">
+          <span class="step-num">1</span>
+          <div class="step-body">
+            <h4>Create</h4>
+            <p>Use a list: <code>arr = [10, 20, 30, 40, 50]</code></p>
+          </div>
+        </div>
+        <div class="step-block">
+          <span class="step-num">2</span>
+          <div class="step-body">
+            <h4>Access by index</h4>
+            <p><code>arr[0]</code> is first, <code>arr[-1]</code> is last (0-based indexing).</p>
+          </div>
+        </div>
+        <div class="step-block">
+          <span class="step-num">3</span>
+          <div class="step-body">
+            <h4>Traverse</h4>
+            <p>Loop with <code>for i in range(len(arr))</code> or <code>for x in arr</code>.</p>
+          </div>
+        </div>
+
+        <h3>Traversal</h3>
+        <p>Visiting each element once (e.g. to print or process):</p>
+        <div class="code-block-wrapper" data-filename="traversal.py">
+          <div class="code-toolbar">
+            <span class="code-filename">traversal.py</span>
+            <button type="button" class="copy-btn">Copy</button>
+          </div>
+          <pre><code class="language-python">arr = [10, 20, 30, 40, 50]
+
+# Using for loop
+for i in range(len(arr)):
+    print(arr[i])
+
+# Using for-each
+for x in arr:
+    print(x)</code></pre>
+        </div>
+
+      <section class="section-card scroll-reveal">
+        <h3>Insertion</h3>
+        <p>Adding an element at a given position. We need to shift elements to the right to make space.</p>
+        <div class="code-block-wrapper" data-filename="insert_at.py">
+          <div class="code-toolbar">
+            <span class="code-filename">insert_at.py</span>
+            <button type="button" class="copy-btn">Copy</button>
+          </div>
+          <pre><code class="language-python">def insert_at(arr, pos, value):
+    # Shift elements from pos onward to the right
+    arr.append(None)  # make space
+    for i in range(len(arr) - 1, pos, -1):
+        arr[i] = arr[i - 1]
+    arr[pos] = value
+    return arr
+
+arr = [10, 20, 30, 40]
+insert_at(arr, 2, 25)
+print(arr)  # [10, 20, 25, 30, 40]</code></pre>
+        </div>
+        <p>Using list built-in: <code>arr.insert(2, 25)</code> inserts <code>25</code> at index <code>2</code>.</p>
+      </section>
+
+      <section class="section-card scroll-reveal">
+        <h3>Deletion</h3>
+        <p>Removing an element at a position. Elements after it are shifted left.</p>
+        <div class="code-block-wrapper" data-filename="delete_at.py">
+          <div class="code-toolbar">
+            <span class="code-filename">delete_at.py</span>
+            <button type="button" class="copy-btn">Copy</button>
+          </div>
+          <pre><code class="language-python">def delete_at(arr, pos):
+    for i in range(pos, len(arr) - 1):
+        arr[i] = arr[i + 1]
+    arr.pop()  # remove last
+    return arr
+
+arr = [10, 20, 30, 40, 50]
+delete_at(arr, 2)
+print(arr)  # [10, 20, 40, 50]</code></pre>
+        </div>
+        <p>Using list built-in: <code>arr.pop(2)</code> removes and returns the element at index <code>2</code>.</p>
+      </section>
+
+      <section class="section-card scroll-reveal">
+        <h3>Update</h3>
+        <p>Change the value at a given index. No shifting needed.</p>
+        <div class="code-block-wrapper" data-filename="update.py">
+          <div class="code-toolbar">
+            <span class="code-filename">update.py</span>
+            <button type="button" class="copy-btn">Copy</button>
+          </div>
+          <pre><code class="language-python">arr = [10, 20, 30, 40]
+arr[2] = 35
+print(arr)  # [10, 20, 35, 40]</code></pre>
+        </div>
+      </section>
+
+      <section class="section-card scroll-reveal">
+        <h2>Two-dimensional (2D) arrays</h2>
+        <p>A 2D array is a grid of rows and columns. In Python we use a list of lists:</p>
+        <div class="code-block-wrapper" data-filename="matrix_2d.py">
+          <div class="code-toolbar">
+            <span class="code-filename">matrix_2d.py</span>
+            <button type="button" class="copy-btn">Copy</button>
+          </div>
+          <pre><code class="language-python"># 3 rows, 4 columns
+matrix = [
+    [1, 2, 3, 4],
+    [5, 6, 7, 8],
+    [9, 10, 11, 12]
+]
+
+# Access: matrix[row][col]
+print(matrix[0][0])  # 1
+print(matrix[1][2])  # 7</code></pre>
+        </div>
+
+        <h3>Traversal (2D)</h3>
+        <div class="code-block-wrapper" data-filename="traversal_2d.py">
+          <div class="code-toolbar">
+            <span class="code-filename">traversal_2d.py</span>
+            <button type="button" class="copy-btn">Copy</button>
+          </div>
+          <pre><code class="language-python">for row in matrix:
+    for cell in row:
+        print(cell, end=" ")
+    print()
+
+# With indices
+for i in range(len(matrix)):
+    for j in range(len(matrix[i])):
+        print(matrix[i][j], end=" ")
+    print()</code></pre>
+        </div>
+
+        <h3>Insertion and deletion in 2D</h3>
+        <p>You can insert or delete an entire row, or (with more work) a column, by shifting rows or elements. Concept is the same as 1D but applied along one dimension.</p>
+      </section>
+
+      <section class="section-card scroll-reveal">
+        <h2>Pros and cons of arrays</h2>
+        <table>
+        <thead>
+          <tr><th>Pros</th><th>Cons</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Fast access by index — O(1)</td>
+            <td>Fixed size (if using true arrays) or costly resizing</td>
+          </tr>
+          <tr>
+            <td>Contiguous memory — cache friendly</td>
+            <td>Insertion/deletion in the middle is O(n)</td>
+          </tr>
+          <tr>
+            <td>Simple to use and implement</td>
+            <td>Wasted space if array is sparse</td>
+          </tr>
+        </tbody>
+        </table>
+
+        <div class="callout callout-note">
+          <strong>Note</strong>
+          Python lists are dynamic arrays: they grow as needed, but insertion in the middle still requires shifting and is O(n) in the worst case.
+        </div>
+      </section>
+
+      <p><a href="lists.html" class="btn btn-primary">Next: Lists →</a></p>
+    </main>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+  <script src="../js/main.js"></script>
+  <script>Prism.highlightAll();</script>
+</body>
+</html>

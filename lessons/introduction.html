@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introduction — Python & DSA Learning Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div id="sidebar-overlay" class="sidebar-overlay"></div>
+  <button id="sidebar-toggle" class="sidebar-toggle" aria-label="Open menu">☰</button>
+  <div class="app-wrap">
+    <aside class="sidebar">
+      <div class="sidebar-brand"><a href="../index.html">Python & DSA Learning Hub</a></div>
+      <div class="sidebar-author">
+        <a href="https://github.com/JibbranAli" target="_blank" rel="noopener noreferrer" class="author-avatar-wrap" aria-label="Syed Jibbran Ali on GitHub">
+          <img src="https://github.com/JibbranAli.png" alt="Syed Jibbran Ali" class="author-avatar" width="64" height="64">
+        </a>
+        <p class="author-name">Syed Jibbran Ali</p>
+        <p class="author-role">DevOps · AI · Full-Stack</p>
+        <div class="author-links">
+          <a href="https://github.com/JibbranAli" target="_blank" rel="noopener noreferrer" class="author-link author-link-github" aria-label="GitHub">GitHub</a>
+          <a href="https://www.linkedin.com/in/jibbran-ali/" target="_blank" rel="noopener noreferrer" class="author-link author-link-linkedin" aria-label="LinkedIn">LinkedIn</a>
+        </div>
+      </div>
+      <div id="sidebar-progress" class="sidebar-progress">
+        <div class="sidebar-progress-label">Your progress</div>
+        <div class="sidebar-progress-bar"><div class="sidebar-progress-fill" style="width: 0%;"></div></div>
+        <div class="sidebar-progress-text">0 / 18 completed</div>
+      </div>
+      <nav class="nav-group"><button type="button" class="nav-group-toggle" aria-expanded="true">Getting Started <span class="chevron">▼</span></button><div class="nav-group-links"><a class="nav-link" href="../index.html">Home</a><a class="nav-link" href="introduction.html">Introduction</a></div></nav>
+      <nav class="nav-group"><button type="button" class="nav-group-toggle" aria-expanded="true">Foundations <span class="chevron">▼</span></button><div class="nav-group-links"><a class="nav-link" href="arrays.html">Arrays</a></div></nav>
+      <nav class="nav-group"><button type="button" class="nav-group-toggle" aria-expanded="true">Python Data Structures <span class="chevron">▼</span></button><div class="nav-group-links"><a class="nav-link" href="lists.html">Lists</a><a class="nav-link" href="tuples.html">Tuples</a><a class="nav-link" href="sets.html">Sets</a><a class="nav-link" href="dictionaries.html">Dictionaries</a></div></nav>
+      <nav class="nav-group"><button type="button" class="nav-group-toggle" aria-expanded="true">File & Algorithms <span class="chevron">▼</span></button><div class="nav-group-links"><a class="nav-link" href="file-handling.html">File Handling</a><a class="nav-link" href="algorithms-basics.html">Algorithms Basics</a><a class="nav-link" href="time-space-complexity.html">Time & Space Complexity</a></div></nav>
+      <nav class="nav-group"><button type="button" class="nav-group-toggle" aria-expanded="true">Searching <span class="chevron">▼</span></button><div class="nav-group-links"><a class="nav-link" href="linear-search.html">Linear Search</a><a class="nav-link" href="binary-search.html">Binary Search</a></div></nav>
+      <nav class="nav-group"><button type="button" class="nav-group-toggle" aria-expanded="true">Sorting <span class="chevron">▼</span></button><div class="nav-group-links"><a class="nav-link" href="bubble-sort.html">Bubble Sort</a><a class="nav-link" href="selection-sort.html">Selection Sort</a><a class="nav-link" href="insertion-sort.html">Insertion Sort</a><a class="nav-link" href="quick-sort.html">Quick Sort</a><a class="nav-link" href="merge-sort.html">Merge Sort</a></div></nav>
+      <nav class="nav-group"><button type="button" class="nav-group-toggle" aria-expanded="true">Linked Lists <span class="chevron">▼</span></button><div class="nav-group-links"><a class="nav-link" href="linked-lists.html">Singly / Doubly / Circular</a></div></nav>
+      <nav class="nav-group"><button type="button" class="nav-group-toggle" aria-expanded="true">Graphs <span class="chevron">▼</span></button><div class="nav-group-links"><a class="nav-link" href="graph-dfs.html">Graph Algorithms (DFS)</a></div></nav>
+    </aside>
+    <main class="main">
+      <a href="../index.html" class="back-link">← Back to Home</a>
+      <header class="lesson-header">
+        <nav class="breadcrumb"><a href="../index.html">Home</a><span>/</span><span>Introduction</span></nav>
+        <h1 class="lesson-title">Introduction</h1>
+        <p class="lesson-meta">Getting started with Python, Data Structures & Algorithms</p>
+        <div class="lesson-header-actions">
+          <div class="lesson-progress-wrap"><div class="lesson-progress-bar"><div class="lesson-progress-fill" style="width: 0%;"></div></div><span class="lesson-progress-text">0% course complete</span></div>
+          <div class="mark-complete-wrap"><button type="button" id="mark-complete-btn" class="mark-complete" data-lesson-id="introduction" aria-label="Mark lesson as completed"><span class="check-icon">✓</span><span>Mark as completed</span></button></div>
+        </div>
+      </header>
+      <p>This course teaches Python data structures and algorithms through clear explanations, real code, and step-by-step examples. You will work with arrays, lists, tuples, sets, dictionaries, file handling, algorithm design, time and space complexity, searching, sorting, linked lists, and graph algorithms.</p>
+      <h2>How to use this hub</h2>
+      <p>Use the sidebar to jump to any lesson. Each lesson follows the same teaching flow as the course material: concepts first, then code and examples. Code blocks can be copied and run in your own environment.</p>
+      <div class="callout callout-tip">
+        <strong>Tip</strong>
+        Work through the modules in order (Arrays → Data Structures → File Handling → Algorithms & Complexity → Searching & Sorting → Linked Lists → Graphs) for the smoothest learning path.
+      </div>
+      <p><a href="arrays.html" class="btn btn-primary">Next: Arrays →</a></p>
+    </main>
+  </div>
+  <script src="../js/main.js"></script>
+</body>
+</html>
