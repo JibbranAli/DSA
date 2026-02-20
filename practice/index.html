@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice & Playground — Python & DSA Learning Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/practice.css">
+</head>
+<body>
+  <div id="sidebar-overlay" class="sidebar-overlay" aria-hidden="true"></div>
+  <button id="sidebar-toggle" class="sidebar-toggle" aria-label="Open menu">☰</button>
+
+  <div class="app-wrap">
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <a href="../index.html">Python & DSA Learning Hub</a>
+      </div>
+      <div class="sidebar-author">
+        <a href="https://github.com/JibbranAli" target="_blank" rel="noopener noreferrer" class="author-avatar-wrap" aria-label="Syed Jibbran Ali on GitHub">
+          <img src="https://github.com/JibbranAli.png" alt="Syed Jibbran Ali" class="author-avatar" width="64" height="64">
+        </a>
+        <p class="author-name">Syed Jibbran Ali</p>
+        <p class="author-role">DevOps · AI · Full-Stack</p>
+        <div class="author-links">
+          <a href="https://github.com/JibbranAli" target="_blank" rel="noopener noreferrer" class="author-link author-link-github" aria-label="GitHub">GitHub</a>
+          <a href="https://www.linkedin.com/in/jibbran-ali/" target="_blank" rel="noopener noreferrer" class="author-link author-link-linkedin" aria-label="LinkedIn">LinkedIn</a>
+        </div>
+      </div>
+      <div id="sidebar-progress" class="sidebar-progress">
+        <div class="sidebar-progress-label">Your progress</div>
+        <div class="sidebar-progress-bar">
+          <div class="sidebar-progress-fill" style="width: 0%;"></div>
+        </div>
+        <div class="sidebar-progress-text">0 / 18 completed</div>
+      </div>
+      <nav class="nav-group">
+        <button type="button" class="nav-group-toggle" aria-expanded="true">Getting Started <span class="chevron">▼</span></button>
+        <div class="nav-group-links">
+          <a class="nav-link" href="../index.html">Home</a>
+          <a class="nav-link" href="../lessons/introduction.html">Introduction</a>
+        </div>
+      </nav>
+      <nav class="nav-group">
+        <button type="button" class="nav-group-toggle" aria-expanded="true">Foundations <span class="chevron">▼</span></button>
+        <div class="nav-group-links">
+          <a class="nav-link" href="../lessons/arrays.html">Arrays</a>
+        </div>
+      </nav>
+      <nav class="nav-group">
+        <button type="button" class="nav-group-toggle" aria-expanded="true">Python Data Structures <span class="chevron">▼</span></button>
+        <div class="nav-group-links">
+          <a class="nav-link" href="../lessons/lists.html">Lists</a>
+          <a class="nav-link" href="../lessons/tuples.html">Tuples</a>
+          <a class="nav-link" href="../lessons/sets.html">Sets</a>
+          <a class="nav-link" href="../lessons/dictionaries.html">Dictionaries</a>
+        </div>
+      </nav>
+      <nav class="nav-group">
+        <button type="button" class="nav-group-toggle" aria-expanded="true">File & Algorithms <span class="chevron">▼</span></button>
+        <div class="nav-group-links">
+          <a class="nav-link" href="../lessons/file-handling.html">File Handling</a>
+          <a class="nav-link" href="../lessons/algorithms-basics.html">Algorithms Basics</a>
+          <a class="nav-link" href="../lessons/time-space-complexity.html">Time & Space Complexity</a>
+        </div>
+      </nav>
+      <nav class="nav-group">
+        <button type="button" class="nav-group-toggle" aria-expanded="true">Searching <span class="chevron">▼</span></button>
+        <div class="nav-group-links">
+          <a class="nav-link" href="../lessons/linear-search.html">Linear Search</a>
+          <a class="nav-link" href="../lessons/binary-search.html">Binary Search</a>
+        </div>
+      </nav>
+      <nav class="nav-group">
+        <button type="button" class="nav-group-toggle" aria-expanded="true">Sorting <span class="chevron">▼</span></button>
+        <div class="nav-group-links">
+          <a class="nav-link" href="../lessons/bubble-sort.html">Bubble Sort</a>
+          <a class="nav-link" href="../lessons/selection-sort.html">Selection Sort</a>
+          <a class="nav-link" href="../lessons/insertion-sort.html">Insertion Sort</a>
+          <a class="nav-link" href="../lessons/quick-sort.html">Quick Sort</a>
+          <a class="nav-link" href="../lessons/merge-sort.html">Merge Sort</a>
+        </div>
+      </nav>
+      <nav class="nav-group">
+        <button type="button" class="nav-group-toggle" aria-expanded="true">Linked Lists <span class="chevron">▼</span></button>
+        <div class="nav-group-links">
+          <a class="nav-link" href="../lessons/linked-lists.html">Singly / Doubly / Circular</a>
+        </div>
+      </nav>
+      <nav class="nav-group">
+        <button type="button" class="nav-group-toggle" aria-expanded="true">Graphs <span class="chevron">▼</span></button>
+        <div class="nav-group-links">
+          <a class="nav-link" href="../lessons/graph-dfs.html">Graph Algorithms (DFS)</a>
+        </div>
+      </nav>
+      <nav class="nav-group nav-group-practice">
+        <button type="button" class="nav-group-toggle" aria-expanded="true">Practice & Playground <span class="chevron">▼</span></button>
+        <div class="nav-group-links">
+          <a class="nav-link active" href="index.html">Dashboard</a>
+          <a class="nav-link" href="problems.html?level=easy">Easy</a>
+          <a class="nav-link" href="problems.html?level=medium">Medium</a>
+          <a class="nav-link" href="problems.html?level=hard">Hard</a>
+          <a class="nav-link" href="compiler.html">Python Compiler</a>
+          <a class="nav-link" href="playground.html">Live Coding Playground</a>
+        </div>
+      </nav>
+    </aside>
+
+    <main class="main practice-page">
+      <a href="../index.html" class="practice-back">← Back to Home</a>
+
+      <section class="practice-hero">
+        <h1>Practice & Playground</h1>
+        <p>Solve problems, run code, and level up — your progress is saved.</p>
+      </section>
+
+      <div class="dashboard-stats" id="dashboard-stats">
+        <div class="stat-card">
+          <div class="stat-value" id="stat-score">0</div>
+          <div class="stat-label">Total score</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="stat-solved">0</div>
+          <div class="stat-label">Problems solved</div>
+        </div>
+        <div class="stat-card badges">
+          <div class="stat-value" id="stat-badge">—</div>
+          <div class="stat-label">Current badge</div>
+        </div>
+      </div>
+
+      <div class="practice-progress-wrap">
+        <div class="practice-progress-label">
+          <span>Practice progress</span>
+          <span id="progress-text">0 / 12 problems</span>
+        </div>
+        <div class="practice-progress-bar">
+          <div class="practice-progress-fill" id="practice-progress-fill" style="width: 0%;"></div>
+        </div>
+      </div>
+
+      <div class="badge-list" id="badge-list">
+        <div class="badge-item locked" data-points="50" title="Earn 50 points">
+          <span>🥉</span> Beginner (50 pts)
+        </div>
+        <div class="badge-item locked" data-points="150" title="Earn 150 points">
+          <span>🥈</span> Intermediate (150 pts)
+        </div>
+        <div class="badge-item locked" data-points="300" title="Earn 300 points">
+          <span>🥇</span> Pro (300 pts)
+        </div>
+      </div>
+
+      <div class="encourage-msg">
+        <strong>Try this:</strong> Start with Easy problems to warm up. Each problem has sample input/output and hidden test cases. Run your code, then Submit to see if you pass!
+      </div>
+
+      <h2 class="section-title" style="margin-bottom: 1rem;">Choose a level</h2>
+      <div class="practice-level-grid">
+        <a href="problems.html?level=easy" class="level-card easy">
+          <div class="level-card-icon">🟢</div>
+          <h3>Easy</h3>
+          <p>Basic Python: loops, if-else, lists, simple functions.</p>
+          <div class="level-card-meta" id="easy-meta">0 / 5 solved</div>
+        </a>
+        <a href="problems.html?level=medium" class="level-card medium">
+          <div class="level-card-icon">🟡</div>
+          <h3>Medium</h3>
+          <p>Lists, dictionaries, basic algorithms.</p>
+          <div class="level-card-meta" id="medium-meta">0 / 4 solved</div>
+        </a>
+        <a href="problems.html?level=hard" class="level-card hard">
+          <div class="level-card-icon">🔴</div>
+          <h3>Hard</h3>
+          <p>Sorting, logic-heavy problems, nested loops.</p>
+          <div class="level-card-meta" id="hard-meta">0 / 3 solved</div>
+        </a>
+        <a href="compiler.html" class="level-card playground">
+          <div class="level-card-icon">🐍</div>
+          <h3>Python Compiler</h3>
+          <p>Run Python 3 in your browser. Write code and see output instantly.</p>
+          <div class="level-card-meta">No installation required</div>
+        </a>
+        <a href="playground.html" class="level-card playground">
+          <div class="level-card-icon">💻</div>
+          <h3>Live Coding Playground</h3>
+          <p>Write any Python code and run it instantly.</p>
+          <div class="level-card-meta">No tests — just code & see output</div>
+        </a>
+      </div>
+    </main>
+  </div>
+
+  <script src="../js/practice-data.js"></script>
+  <script src="../js/practice.js"></script>
+  <script>
+    (function () {
+      var stats = window.PracticeState.getDashboardStats();
+      document.getElementById('stat-score').textContent = stats.score;
+      document.getElementById('stat-solved').textContent = stats.solved;
+      document.getElementById('stat-badge').textContent = stats.badgeName;
+      document.getElementById('progress-text').textContent = stats.solved + ' / ' + stats.totalProblems + ' problems';
+      document.getElementById('practice-progress-fill').style.width = stats.progressPct + '%';
+      document.getElementById('easy-meta').textContent = stats.easySolved + ' / ' + stats.easyTotal + ' solved';
+      document.getElementById('medium-meta').textContent = stats.mediumSolved + ' / ' + stats.mediumTotal + ' solved';
+      document.getElementById('hard-meta').textContent = stats.hardSolved + ' / ' + stats.hardTotal + ' solved';
+      var list = document.getElementById('badge-list');
+      if (list) {
+        list.querySelectorAll('.badge-item').forEach(function (el) {
+          var p = parseInt(el.getAttribute('data-points'), 10);
+          if (stats.score >= p) {
+            el.classList.remove('locked');
+            el.classList.add('unlocked');
+          }
+        });
+      }
+    })();
+  </script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

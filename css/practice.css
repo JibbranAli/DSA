@@ -1,0 +1,647 @@
+/* ============================================
+   Practice & Playground — Fun, engaging UI
+   ============================================ */
+
+.practice-page {
+  max-width: 100%;
+}
+
+.practice-hero {
+  text-align: center;
+  padding: 2rem 1rem 2.5rem;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(145deg, rgba(56, 189, 248, 0.08) 0%, rgba(129, 140, 248, 0.06) 100%);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.practice-hero h1 {
+  font-size: 1.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.practice-hero p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+/* —— Dashboard stats —— */
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: linear-gradient(165deg, var(--bg-card) 0%, #0a0f14 100%);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--accent);
+  line-height: 1.2;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
+.stat-card.badges .stat-value { font-size: 1.5rem; }
+
+/* —— Progress bar —— */
+.practice-progress-wrap {
+  margin-bottom: 2rem;
+}
+
+.practice-progress-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.practice-progress-bar {
+  height: 12px;
+  background: var(--bg-code);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.practice-progress-fill {
+  height: 100%;
+  background: var(--gradient-hero);
+  border-radius: var(--radius-full);
+  transition: width 0.4s ease;
+}
+
+/* —— Badges —— */
+.badge-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.badge-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  font-size: 0.9rem;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.badge-item.unlocked {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.badge-item.locked {
+  opacity: 0.6;
+  color: var(--text-muted);
+}
+
+.badge-item:hover {
+  transform: scale(1.03);
+}
+
+/* —— Level cards (Easy / Medium / Hard / Playground) —— */
+.practice-level-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.level-card {
+  display: block;
+  background: linear-gradient(165deg, var(--bg-card) 0%, #0a0f14 100%);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.25s;
+  position: relative;
+  overflow: hidden;
+}
+
+.level-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  opacity: 0.7;
+  transition: opacity 0.25s;
+}
+
+.level-card.easy::before { background: var(--success); }
+.level-card.medium::before { background: var(--warning); }
+.level-card.hard::before { background: #f87171; }
+.level-card.playground::before { background: var(--gradient-hero); }
+
+.level-card:hover {
+  border-color: var(--border-light);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+}
+
+.level-card:hover::before {
+  opacity: 1;
+}
+
+.level-card-icon {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+  line-height: 1;
+}
+
+.level-card h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1.15rem;
+  color: var(--text);
+}
+
+.level-card p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.level-card-meta {
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* —— Problem list —— */
+.problem-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.problem-filter-btn {
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: var(--font-sans);
+}
+
+.problem-filter-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.problem-filter-btn.active {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.problem-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.problem-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s;
+}
+
+.problem-card:hover {
+  border-color: var(--border-light);
+  background: var(--bg-card-hover);
+  transform: translateX(4px);
+}
+
+.problem-card.solved {
+  border-left: 4px solid var(--success);
+}
+
+.problem-card .difficulty-badge {
+  flex-shrink: 0;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.difficulty-badge.easy { background: rgba(52, 211, 153, 0.2); color: var(--success); }
+.difficulty-badge.medium { background: rgba(251, 191, 36, 0.2); color: var(--warning); }
+.difficulty-badge.hard { background: rgba(248, 113, 113, 0.2); color: #f87171; }
+
+.problem-card-title {
+  flex: 1;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0;
+  font-size: 1rem;
+}
+
+.problem-card-points {
+  font-size: 0.85rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.problem-card-done {
+  color: var(--success);
+  font-size: 1.25rem;
+}
+
+/* —— Problem solver page —— */
+.problem-layout {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 900px) {
+  .problem-layout {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.problem-statement-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.problem-statement-card h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.problem-statement-card .statement {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  margin: 1rem 0;
+}
+
+.problem-statement-card .statement code {
+  font-size: 0.85em;
+}
+
+.example-box {
+  margin: 1rem 0;
+  padding: 1rem;
+  background: var(--bg-code);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+}
+
+.example-box strong {
+  color: var(--text);
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.example-box pre {
+  margin: 0.5rem 0 0;
+  padding: 0.75rem;
+  background: rgba(0,0,0,0.2);
+  border-radius: 6px;
+  font-size: 0.85rem;
+  overflow-x: auto;
+}
+
+/* —— Editor area —— */
+.editor-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.editor-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 1rem;
+  background: var(--bg-code);
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.editor-toolbar-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.editor-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.editor-btn {
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  border: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: var(--font-sans);
+}
+
+.editor-btn-run {
+  background: var(--accent-soft);
+  color: var(--accent);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.editor-btn-run:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+.editor-btn-submit {
+  background: var(--success);
+  color: #0d1219;
+  border: 1px solid var(--success);
+}
+
+.editor-btn-submit:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+.editor-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.code-editor {
+  width: 100%;
+  min-height: 280px;
+  padding: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  background: #0d1117;
+  color: #e6edf3;
+  border: none;
+  resize: vertical;
+  outline: none;
+  tab-size: 4;
+}
+
+.code-editor::placeholder {
+  color: var(--text-muted);
+}
+
+/* —— Output / Result panel —— */
+.output-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.output-header {
+  padding: 0.6rem 1rem;
+  background: var(--bg-code);
+  border-bottom: 1px solid var(--border);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.output-body {
+  padding: 1rem;
+  min-height: 80px;
+  max-height: 240px;
+  overflow-y: auto;
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: break-word;
+  color: var(--text);
+}
+
+.output-body.empty {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.output-body.success {
+  color: var(--success);
+}
+
+.output-body.error {
+  color: #f87171;
+}
+
+/* —— Test results —— */
+.test-result-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.test-result-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 0.35rem;
+  font-size: 0.9rem;
+  background: rgba(255,255,255,0.03);
+}
+
+.test-result-list li.passed {
+  color: var(--success);
+}
+
+.test-result-list li.failed {
+  color: #f87171;
+}
+
+/* —— Result modal —— */
+.result-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s, visibility 0.25s;
+}
+
+.result-modal-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.result-modal {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  transform: scale(0.95);
+  transition: transform 0.25s;
+}
+
+.result-modal-overlay.show .result-modal {
+  transform: scale(1);
+}
+
+.result-modal-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+.result-modal h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+  color: var(--text);
+}
+
+.result-modal p {
+  margin: 0 0 1.5rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.result-modal .points-earned {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+}
+
+.result-modal-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* —— Playground —— */
+.playground-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.playground-editor-wrap {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.playground-editor-wrap .editor-toolbar {
+  justify-content: space-between;
+}
+
+.playground-output {
+  margin-top: 0.5rem;
+}
+
+/* —— Confetti (canvas) —— */
+#confetti-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* —— Back link for practice —— */
+.practice-back {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.practice-back:hover {
+  color: var(--accent);
+}
+
+/* —— Student-friendly messages —— */
+.encourage-msg {
+  padding: 1rem 1.25rem;
+  background: var(--accent-soft);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: var(--radius-sm);
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.encourage-msg strong {
+  color: var(--accent);
+}

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Problem — Python & DSA Learning Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/practice.css">
+</head>
+<body>
+  <div id="sidebar-overlay" class="sidebar-overlay" aria-hidden="true"></div>
+  <button id="sidebar-toggle" class="sidebar-toggle" aria-label="Open menu">☰</button>
+
+  <div class="app-wrap">
+    <aside class="sidebar">
+      <div class="sidebar-brand"><a href="../index.html">Python & DSA Learning Hub</a></div>
+      <div class="sidebar-author">
+        <a href="https://github.com/JibbranAli" target="_blank" rel="noopener noreferrer" class="author-avatar-wrap"><img src="https://github.com/JibbranAli.png" alt="Syed Jibbran Ali" class="author-avatar" width="64" height="64"></a>
+        <p class="author-name">Syed Jibbran Ali</p>
+        <p class="author-role">DevOps · AI · Full-Stack</p>
+        <div class="author-links"><a href="https://github.com/JibbranAli" target="_blank" rel="noopener noreferrer" class="author-link author-link-github">GitHub</a><a href="https://www.linkedin.com/in/jibbran-ali/" target="_blank" rel="noopener noreferrer" class="author-link author-link-linkedin">LinkedIn</a></div>
+      </div>
+      <div id="sidebar-progress" class="sidebar-progress"><div class="sidebar-progress-label">Your progress</div><div class="sidebar-progress-bar"><div class="sidebar-progress-fill" style="width: 0%;"></div></div><div class="sidebar-progress-text">0 / 18 completed</div></div>
+      <nav class="nav-group"><button type="button" class="nav-group-toggle" aria-expanded="true">Getting Started <span class="chevron">▼</span></button><div class="nav-group-links"><a class="nav-link" href="../index.html">Home</a><a class="nav-link" href="../lessons/introduction.html">Introduction</a></div></nav>
+      <nav class="nav-group"><button type="button" class="nav-group-toggle" aria-expanded="true">Foundations <span class="chevron">▼</span></button><div class="nav-group-links"><a class="nav-link" href="../lessons/arrays.html">Arrays</a></div></nav>
+      <nav class="nav-group"><button type="button" class="nav-group-toggle" aria-expanded="true">Python Data Structures <span class="chevron">▼</span></button><div class="nav-group-links"><a class="nav-link" href="../lessons/lists.html">Lists</a><a class="nav-link" href="../lessons/tuples.html">Tuples</a><a class="nav-link" href="../lessons/sets.html">Sets</a><a class="nav-link" href="../lessons/dictionaries.html">Dictionaries</a></div></nav>
+      <nav class="nav-group"><button type="button" class="nav-group-toggle" aria-expanded="true">File & Algorithms <span class="chevron">▼</span></button><div class="nav-group-links"><a class="nav-link" href="../lessons/file-handling.html">File Handling</a><a class="nav-link" href="../lessons/algorithms-basics.html">Algorithms Basics</a><a class="nav-link" href="../lessons/time-space-complexity.html">Time & Space Complexity</a></div></nav>
+      <nav class="nav-group"><button type="button" class="nav-group-toggle" aria-expanded="true">Searching <span class="chevron">▼</span></button><div class="nav-group-links"><a class="nav-link" href="../lessons/linear-search.html">Linear Search</a><a class="nav-link" href="../lessons/binary-search.html">Binary Search</a></div></nav>
+      <nav class="nav-group"><button type="button" class="nav-group-toggle" aria-expanded="true">Sorting <span class="chevron">▼</span></button><div class="nav-group-links"><a class="nav-link" href="../lessons/bubble-sort.html">Bubble Sort</a><a class="nav-link" href="../lessons/selection-sort.html">Selection Sort</a><a class="nav-link" href="../lessons/insertion-sort.html">Insertion Sort</a><a class="nav-link" href="../lessons/quick-sort.html">Quick Sort</a><a class="nav-link" href="../lessons/merge-sort.html">Merge Sort</a></div></nav>
+      <nav class="nav-group"><button type="button" class="nav-group-toggle" aria-expanded="true">Linked Lists <span class="chevron">▼</span></button><div class="nav-group-links"><a class="nav-link" href="../lessons/linked-lists.html">Singly / Doubly / Circular</a></div></nav>
+      <nav class="nav-group"><button type="button" class="nav-group-toggle" aria-expanded="true">Graphs <span class="chevron">▼</span></button><div class="nav-group-links"><a class="nav-link" href="../lessons/graph-dfs.html">Graph Algorithms (DFS)</a></div></nav>
+      <nav class="nav-group nav-group-practice"><button type="button" class="nav-group-toggle" aria-expanded="true">Practice & Playground <span class="chevron">▼</span></button><div class="nav-group-links"><a class="nav-link" href="index.html">Dashboard</a><a class="nav-link" href="problems.html?level=easy">Easy</a><a class="nav-link" href="problems.html?level=medium">Medium</a><a class="nav-link" href="problems.html?level=hard">Hard</a><a class="nav-link" href="compiler.html">Python Compiler</a><a class="nav-link" href="playground.html">Live Coding Playground</a></div></nav>
+    </aside>
+
+    <main class="main practice-page">
+      <a href="index.html" class="practice-back">← Back to Practice Dashboard</a>
+
+      <div class="problem-layout">
+        <div>
+          <div class="problem-statement-card" id="problem-statement">
+            <h1><span id="problem-title">Loading…</span> <span class="difficulty-badge easy" id="problem-difficulty">Easy</span></h1>
+            <div class="statement" id="problem-statement-text"></div>
+            <div class="example-box">
+              <strong>Sample input</strong>
+              <pre id="sample-input"></pre>
+            </div>
+            <div class="example-box">
+              <strong>Sample output</strong>
+              <pre id="sample-output"></pre>
+            </div>
+          </div>
+
+          <div class="output-card">
+            <div class="output-header">Output</div>
+            <div class="output-body empty" id="output-area">Run your code or submit to see results here.</div>
+            <div class="output-body" id="test-results-area" style="display: none;"></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="editor-card">
+            <div class="editor-toolbar">
+              <span class="editor-toolbar-label">Python</span>
+              <div class="editor-actions">
+                <button type="button" class="editor-btn editor-btn-run" id="btn-run">Run code</button>
+                <button type="button" class="editor-btn editor-btn-submit" id="btn-submit">Submit</button>
+              </div>
+            </div>
+            <textarea class="code-editor" id="code-editor" placeholder="# Write your Python code here..." spellcheck="false"></textarea>
+          </div>
+          <p class="encourage-msg" style="margin-top: 1rem;"><strong>Tip:</strong> Use the sample input to test. Click "Run code" to see output; "Submit" runs hidden test cases and gives you points if all pass.</p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div class="result-modal-overlay" id="result-modal" aria-hidden="true">
+    <div class="result-modal">
+      <div class="result-modal-icon" id="result-icon">✅</div>
+      <h3 id="result-title">Great job!</h3>
+      <p id="result-message">All test cases passed.</p>
+      <div class="points-earned" id="result-points">+10 points</div>
+      <div class="result-modal-actions">
+        <a href="index.html" class="btn btn-primary">Back to Dashboard</a>
+        <button type="button" class="btn btn-secondary" id="result-close">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/pyodide/v0.24.1/full/pyodide.js"></script>
+  <script src="../js/practice-data.js"></script>
+  <script src="../js/practice.js"></script>
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var id = params.get('id');
+      var problem = id ? window.getProblemById(id) : null;
+      if (!problem) {
+        document.getElementById('problem-statement').innerHTML = '<h1>Problem not found</h1><p>Go back to <a href="problems.html">practice problems</a>.</p>';
+        return;
+      }
+      document.title = problem.title + ' — Python & DSA Learning Hub';
+      document.getElementById('problem-title').textContent = problem.title;
+      document.getElementById('problem-difficulty').textContent = problem.difficulty;
+      document.getElementById('problem-difficulty').className = 'difficulty-badge ' + problem.difficulty;
+      document.getElementById('problem-statement-text').innerHTML = problem.statement;
+      document.getElementById('sample-input').textContent = problem.sampleInput || '';
+      document.getElementById('sample-output').textContent = problem.sampleOutput || '';
+      var editor = document.getElementById('code-editor');
+      editor.value = problem.starterCode || '';
+
+      var outputArea = document.getElementById('output-area');
+      var testResultsArea = document.getElementById('test-results-area');
+      function showOutput(text, isError) {
+        testResultsArea.style.display = 'none';
+        outputArea.style.display = 'block';
+        outputArea.textContent = text || '(no output)';
+        outputArea.className = 'output-body' + (isError ? ' error' : text ? ' success' : ' empty');
+      }
+
+      var btnRun = document.getElementById('btn-run');
+      var btnSubmit = document.getElementById('btn-submit');
+      function setBusy(busy) {
+        btnRun.disabled = busy;
+        btnSubmit.disabled = busy;
+        if (busy) showOutput('Running… (first run may load Python)', false);
+      }
+      btnRun.addEventListener('click', function () {
+        setBusy(true);
+        window.runPythonCode(editor.value, problem.sampleInput).then(function (out) {
+          setBusy(false);
+          var isErr = out.indexOf('[Error]') === 0;
+          showOutput(out, isErr);
+        }).catch(function (err) {
+          setBusy(false);
+          showOutput('[Error] ' + (err.message || String(err)), true);
+        });
+      });
+      btnSubmit.addEventListener('click', function () {
+        setBusy(true);
+        outputArea.style.display = 'block';
+        outputArea.textContent = 'Running test cases…';
+        outputArea.className = 'output-body';
+        testResultsArea.style.display = 'none';
+        window.runPracticeTests(problem, editor.value, function (res) {
+          setBusy(false);
+          var html = '<ul class="test-result-list">';
+          res.results.forEach(function (r) {
+            html += '<li class="' + (r.passed ? 'passed' : 'failed') + '">' + (r.passed ? '✅' : '❌') + ' Test ' + r.index + ': ' + (r.passed ? 'Passed' : 'Failed') + (r.passed ? '' : ' (expected: ' + r.expected + ', got: ' + r.actual + ')') + '</li>';
+          });
+          html += '</ul>';
+          testResultsArea.innerHTML = html;
+          testResultsArea.style.display = 'block';
+          outputArea.style.display = 'none';
+          if (res.allPassed) {
+            window.PracticeState.markSolved(problem.id, problem.points);
+            window.triggerPracticeConfetti();
+            var modal = document.getElementById('result-modal');
+            document.getElementById('result-icon').textContent = '🎉';
+            document.getElementById('result-title').textContent = 'Great job!';
+            document.getElementById('result-message').textContent = 'All test cases passed. You earned ' + problem.points + ' points.';
+            document.getElementById('result-points').textContent = '+' + problem.points + ' points';
+            modal.classList.add('show');
+            modal.setAttribute('aria-hidden', 'false');
+          }
+        });
+      });
+      document.getElementById('result-close').addEventListener('click', function () {
+        document.getElementById('result-modal').classList.remove('show');
+        document.getElementById('result-modal').setAttribute('aria-hidden', 'true');
+      });
+      document.getElementById('result-modal').addEventListener('click', function (e) {
+        if (e.target === this) {
+          this.classList.remove('show');
+          this.setAttribute('aria-hidden', 'true');
+        }
+      });
+    })();
+  </script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

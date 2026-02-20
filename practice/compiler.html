@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python Compiler — Python & DSA Learning Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/practice.css">
+</head>
+<body>
+  <div id="sidebar-overlay" class="sidebar-overlay" aria-hidden="true"></div>
+  <button id="sidebar-toggle" class="sidebar-toggle" aria-label="Open menu">☰</button>
+
+  <div class="app-wrap">
+    <aside class="sidebar">
+      <div class="sidebar-brand"><a href="../index.html">Python & DSA Learning Hub</a></div>
+      <div class="sidebar-author">
+        <a href="https://github.com/JibbranAli" target="_blank" rel="noopener noreferrer" class="author-avatar-wrap"><img src="https://github.com/JibbranAli.png" alt="Syed Jibbran Ali" class="author-avatar" width="64" height="64"></a>
+        <p class="author-name">Syed Jibbran Ali</p>
+        <p class="author-role">DevOps · AI · Full-Stack</p>
+        <div class="author-links"><a href="https://github.com/JibbranAli" target="_blank" rel="noopener noreferrer" class="author-link author-link-github">GitHub</a><a href="https://www.linkedin.com/in/jibbran-ali/" target="_blank" rel="noopener noreferrer" class="author-link author-link-linkedin">LinkedIn</a></div>
+      </div>
+      <div id="sidebar-progress" class="sidebar-progress"><div class="sidebar-progress-label">Your progress</div><div class="sidebar-progress-bar"><div class="sidebar-progress-fill" style="width: 0%;"></div></div><div class="sidebar-progress-text">0 / 18 completed</div></div>
+      <nav class="nav-group"><button type="button" class="nav-group-toggle" aria-expanded="true">Getting Started <span class="chevron">▼</span></button><div class="nav-group-links"><a class="nav-link" href="../index.html">Home</a><a class="nav-link" href="../lessons/introduction.html">Introduction</a></div></nav>
+      <nav class="nav-group"><button type="button" class="nav-group-toggle" aria-expanded="true">Foundations <span class="chevron">▼</span></button><div class="nav-group-links"><a class="nav-link" href="../lessons/arrays.html">Arrays</a></div></nav>
+      <nav class="nav-group"><button type="button" class="nav-group-toggle" aria-expanded="true">Python Data Structures <span class="chevron">▼</span></button><div class="nav-group-links"><a class="nav-link" href="../lessons/lists.html">Lists</a><a class="nav-link" href="../lessons/tuples.html">Tuples</a><a class="nav-link" href="../lessons/sets.html">Sets</a><a class="nav-link" href="../lessons/dictionaries.html">Dictionaries</a></div></nav>
+      <nav class="nav-group"><button type="button" class="nav-group-toggle" aria-expanded="true">File & Algorithms <span class="chevron">▼</span></button><div class="nav-group-links"><a class="nav-link" href="../lessons/file-handling.html">File Handling</a><a class="nav-link" href="../lessons/algorithms-basics.html">Algorithms Basics</a><a class="nav-link" href="../lessons/time-space-complexity.html">Time & Space Complexity</a></div></nav>
+      <nav class="nav-group"><button type="button" class="nav-group-toggle" aria-expanded="true">Searching <span class="chevron">▼</span></button><div class="nav-group-links"><a class="nav-link" href="../lessons/linear-search.html">Linear Search</a><a class="nav-link" href="../lessons/binary-search.html">Binary Search</a></div></nav>
+      <nav class="nav-group"><button type="button" class="nav-group-toggle" aria-expanded="true">Sorting <span class="chevron">▼</span></button><div class="nav-group-links"><a class="nav-link" href="../lessons/bubble-sort.html">Bubble Sort</a><a class="nav-link" href="../lessons/selection-sort.html">Selection Sort</a><a class="nav-link" href="../lessons/insertion-sort.html">Insertion Sort</a><a class="nav-link" href="../lessons/quick-sort.html">Quick Sort</a><a class="nav-link" href="../lessons/merge-sort.html">Merge Sort</a></div></nav>
+      <nav class="nav-group"><button type="button" class="nav-group-toggle" aria-expanded="true">Linked Lists <span class="chevron">▼</span></button><div class="nav-group-links"><a class="nav-link" href="../lessons/linked-lists.html">Singly / Doubly / Circular</a></div></nav>
+      <nav class="nav-group"><button type="button" class="nav-group-toggle" aria-expanded="true">Graphs <span class="chevron">▼</span></button><div class="nav-group-links"><a class="nav-link" href="../lessons/graph-dfs.html">Graph Algorithms (DFS)</a></div></nav>
+      <nav class="nav-group nav-group-practice"><button type="button" class="nav-group-toggle" aria-expanded="true">Practice & Playground <span class="chevron">▼</span></button><div class="nav-group-links"><a class="nav-link" href="index.html">Dashboard</a><a class="nav-link" href="problems.html?level=easy">Easy</a><a class="nav-link" href="problems.html?level=medium">Medium</a><a class="nav-link" href="problems.html?level=hard">Hard</a><a class="nav-link active" href="compiler.html">Python Compiler</a><a class="nav-link" href="playground.html">Live Coding Playground</a></div></nav>
+    </aside>
+
+    <main class="main practice-page">
+      <a href="../index.html" class="practice-back">← Back to Home</a>
+
+      <section class="practice-hero">
+        <h1>Python Compiler</h1>
+        <p>Write Python 3 code and run it in your browser. No installation required.</p>
+      </section>
+
+      <div class="playground-layout">
+        <div class="playground-editor-wrap">
+          <div class="editor-toolbar">
+            <span class="editor-toolbar-label">Python 3</span>
+            <div class="editor-actions">
+              <button type="button" class="editor-btn editor-btn-run" id="compiler-run">Run</button>
+              <button type="button" class="editor-btn btn-secondary" id="compiler-clear" style="background: rgba(255,255,255,0.05); color: var(--text-muted); border: 1px solid var(--border);">Clear</button>
+            </div>
+          </div>
+          <textarea class="code-editor" id="compiler-editor" style="min-height: 320px;" placeholder="# Write your Python code here" spellcheck="false"># Python Compiler — run code in your browser
+# Uses Pyodide (Python via WebAssembly)
+
+print("Hello, World!")
+print(2 + 3)
+print([1, 2, 3])
+</textarea>
+        </div>
+        <div class="output-card playground-output">
+          <div class="output-header">Output</div>
+          <div class="output-body empty" id="compiler-output">Click "Run" to execute your code. First run may take a few seconds to load Python.</div>
+        </div>
+      </div>
+      <div class="encourage-msg">
+        <strong>How it works:</strong> Your code runs in the browser using Pyodide (Python compiled to WebAssembly). Nothing is sent to a server. For programs that use <code>input()</code>, use the <a href="problems.html?level=easy">practice problems</a> or set variables directly in code.
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/pyodide/v0.24.1/full/pyodide.js"></script>
+  <script src="../js/practice.js"></script>
+  <script>
+    (function () {
+      var editor = document.getElementById('compiler-editor');
+      var output = document.getElementById('compiler-output');
+      var btnRun = document.getElementById('compiler-run');
+      var btnClear = document.getElementById('compiler-clear');
+      btnRun.addEventListener('click', function () {
+        btnRun.disabled = true;
+        output.textContent = 'Running… (first time may load Python)';
+        output.className = 'output-body';
+        window.runPythonCode(editor.value, '').then(function (text) {
+          btnRun.disabled = false;
+          output.textContent = text || '(no output)';
+          output.className = 'output-body' + (text && text.indexOf('[Error]') === 0 ? ' error' : ' success');
+        }).catch(function (err) {
+          btnRun.disabled = false;
+          output.textContent = '[Error] ' + (err.message || String(err));
+          output.className = 'output-body error';
+        });
+      });
+      btnClear.addEventListener('click', function () {
+        editor.value = '# Write your Python code here\nprint("Hello!")\n';
+        output.textContent = 'Click "Run" to execute your code.';
+        output.className = 'output-body empty';
+      });
+    })();
+  </script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

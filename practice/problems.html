@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice Problems — Python & DSA Learning Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/practice.css">
+</head>
+<body>
+  <div id="sidebar-overlay" class="sidebar-overlay" aria-hidden="true"></div>
+  <button id="sidebar-toggle" class="sidebar-toggle" aria-label="Open menu">☰</button>
+
+  <div class="app-wrap">
+    <aside class="sidebar">
+      <div class="sidebar-brand"><a href="../index.html">Python & DSA Learning Hub</a></div>
+      <div class="sidebar-author">
+        <a href="https://github.com/JibbranAli" target="_blank" rel="noopener noreferrer" class="author-avatar-wrap"><img src="https://github.com/JibbranAli.png" alt="Syed Jibbran Ali" class="author-avatar" width="64" height="64"></a>
+        <p class="author-name">Syed Jibbran Ali</p>
+        <p class="author-role">DevOps · AI · Full-Stack</p>
+        <div class="author-links">
+          <a href="https://github.com/JibbranAli" target="_blank" rel="noopener noreferrer" class="author-link author-link-github">GitHub</a>
+          <a href="https://www.linkedin.com/in/jibbran-ali/" target="_blank" rel="noopener noreferrer" class="author-link author-link-linkedin">LinkedIn</a>
+        </div>
+      </div>
+      <div id="sidebar-progress" class="sidebar-progress"><div class="sidebar-progress-label">Your progress</div><div class="sidebar-progress-bar"><div class="sidebar-progress-fill" style="width: 0%;"></div></div><div class="sidebar-progress-text">0 / 18 completed</div></div>
+      <nav class="nav-group"><button type="button" class="nav-group-toggle" aria-expanded="true">Getting Started <span class="chevron">▼</span></button><div class="nav-group-links"><a class="nav-link" href="../index.html">Home</a><a class="nav-link" href="../lessons/introduction.html">Introduction</a></div></nav>
+      <nav class="nav-group"><button type="button" class="nav-group-toggle" aria-expanded="true">Foundations <span class="chevron">▼</span></button><div class="nav-group-links"><a class="nav-link" href="../lessons/arrays.html">Arrays</a></div></nav>
+      <nav class="nav-group"><button type="button" class="nav-group-toggle" aria-expanded="true">Python Data Structures <span class="chevron">▼</span></button><div class="nav-group-links"><a class="nav-link" href="../lessons/lists.html">Lists</a><a class="nav-link" href="../lessons/tuples.html">Tuples</a><a class="nav-link" href="../lessons/sets.html">Sets</a><a class="nav-link" href="../lessons/dictionaries.html">Dictionaries</a></div></nav>
+      <nav class="nav-group"><button type="button" class="nav-group-toggle" aria-expanded="true">File & Algorithms <span class="chevron">▼</span></button><div class="nav-group-links"><a class="nav-link" href="../lessons/file-handling.html">File Handling</a><a class="nav-link" href="../lessons/algorithms-basics.html">Algorithms Basics</a><a class="nav-link" href="../lessons/time-space-complexity.html">Time & Space Complexity</a></div></nav>
+      <nav class="nav-group"><button type="button" class="nav-group-toggle" aria-expanded="true">Searching <span class="chevron">▼</span></button><div class="nav-group-links"><a class="nav-link" href="../lessons/linear-search.html">Linear Search</a><a class="nav-link" href="../lessons/binary-search.html">Binary Search</a></div></nav>
+      <nav class="nav-group"><button type="button" class="nav-group-toggle" aria-expanded="true">Sorting <span class="chevron">▼</span></button><div class="nav-group-links"><a class="nav-link" href="../lessons/bubble-sort.html">Bubble Sort</a><a class="nav-link" href="../lessons/selection-sort.html">Selection Sort</a><a class="nav-link" href="../lessons/insertion-sort.html">Insertion Sort</a><a class="nav-link" href="../lessons/quick-sort.html">Quick Sort</a><a class="nav-link" href="../lessons/merge-sort.html">Merge Sort</a></div></nav>
+      <nav class="nav-group"><button type="button" class="nav-group-toggle" aria-expanded="true">Linked Lists <span class="chevron">▼</span></button><div class="nav-group-links"><a class="nav-link" href="../lessons/linked-lists.html">Singly / Doubly / Circular</a></div></nav>
+      <nav class="nav-group"><button type="button" class="nav-group-toggle" aria-expanded="true">Graphs <span class="chevron">▼</span></button><div class="nav-group-links"><a class="nav-link" href="../lessons/graph-dfs.html">Graph Algorithms (DFS)</a></div></nav>
+      <nav class="nav-group nav-group-practice"><button type="button" class="nav-group-toggle" aria-expanded="true">Practice & Playground <span class="chevron">▼</span></button><div class="nav-group-links"><a class="nav-link" href="index.html">Dashboard</a><a class="nav-link" href="problems.html?level=easy">Easy</a><a class="nav-link" href="problems.html?level=medium">Medium</a><a class="nav-link" href="problems.html?level=hard">Hard</a><a class="nav-link" href="compiler.html">Python Compiler</a><a class="nav-link" href="playground.html">Live Coding Playground</a></div></nav>
+    </aside>
+
+    <main class="main practice-page">
+      <a href="index.html" class="practice-back">← Back to Practice Dashboard</a>
+
+      <section class="practice-hero">
+        <h1 id="problems-title">Practice Problems</h1>
+        <p id="problems-subtitle">Pick a problem and try your solution.</p>
+      </section>
+
+      <div class="problem-filters">
+        <a href="problems.html?level=easy" class="problem-filter-btn" data-level="easy">🟢 Easy</a>
+        <a href="problems.html?level=medium" class="problem-filter-btn" data-level="medium">🟡 Medium</a>
+        <a href="problems.html?level=hard" class="problem-filter-btn" data-level="hard">🔴 Hard</a>
+      </div>
+
+      <div class="problem-list" id="problem-list"></div>
+    </main>
+  </div>
+
+  <script src="../js/practice-data.js"></script>
+  <script src="../js/practice.js"></script>
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var level = params.get('level') || 'easy';
+      var titles = { easy: 'Easy Problems', medium: 'Medium Problems', hard: 'Hard Problems' };
+      var subtitles = { easy: 'Basic Python — loops, lists, simple logic', medium: 'Lists, dicts, basic algorithms', hard: 'Sorting, logic, nested loops' };
+      document.getElementById('problems-title').textContent = titles[level] || 'Practice Problems';
+      document.getElementById('problems-subtitle').textContent = subtitles[level] || 'Pick a problem.';
+      document.querySelectorAll('.problem-filter-btn').forEach(function (btn) {
+        if ((btn.getAttribute('href') || '').indexOf('level=' + level) !== -1) btn.classList.add('active');
+      });
+      var problems = window.getProblemsByLevel(level);
+      var listEl = document.getElementById('problem-list');
+      var solved = window.PracticeState.loadState().completed || {};
+      problems.forEach(function (p) {
+        var a = document.createElement('a');
+        a.href = 'problem.html?id=' + encodeURIComponent(p.id);
+        a.className = 'problem-card' + (solved[p.id] ? ' solved' : '');
+        a.innerHTML = '<span class="difficulty-badge ' + p.difficulty + '">' + p.difficulty + '</span>' +
+          '<span class="problem-card-title">' + p.title + '</span>' +
+          '<span class="problem-card-points">' + p.points + ' pts</span>' +
+          (solved[p.id] ? '<span class="problem-card-done" aria-label="Solved">✓</span>' : '');
+        listEl.appendChild(a);
+      });
+    })();
+  </script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
